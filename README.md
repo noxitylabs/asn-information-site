@@ -5,7 +5,7 @@ ASN page template is awesome looking utility to display important information ab
 
 ## Demo & Features
 
-![asn-screenshot](https://stor.maticboncina.si/github/asn/asn-demo.jpeg)
+![asn-screenshot](https://stor.maticboncina.si/github/asn/ans-demo.jpeg)
 
 ## Authors
 

@@ -3,9 +3,13 @@
 
 ASN page template is awesome looking utility to display important information about your ASN to your customers.
 
-## Demo & Features
+## Demo
 
 ![asn-screenshot](demo.jpeg)
+
+## Customization
+
+Select the color from [this page](https://picocss.com/docs/customization.html) and overwrite the variables in important.css. Use "Pink Dark scheme (Forced)" from variable generator.
 
 ## Authors
 

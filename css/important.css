@@ -1,0 +1,8 @@
+/* Pink Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+    --primary: #d81b60 !important;
+    --primary-hover: #e91e63 !important;
+    --primary-focus: rgba(216, 27, 96, 0.25) !important;
+    --primary-inverse: #FFF !important;
+  }

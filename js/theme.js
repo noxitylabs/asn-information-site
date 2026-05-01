@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    var root = document.documentElement;
-    var STORAGE_KEY = 'theme';
+    const root = document.documentElement;
+    const STORAGE_KEY = 'theme';
 
     function safeGet(key) {
         try {
@@ -26,16 +26,16 @@
     }
 
     function init() {
-        var saved = safeGet(STORAGE_KEY);
-        var preferred = globalThis.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const saved = safeGet(STORAGE_KEY);
+        const preferred = globalThis.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         apply(saved || preferred);
     }
 
     function bind() {
-        var btn = document.querySelector('[data-theme-toggle]');
+        const btn = document.querySelector('[data-theme-toggle]');
         if (!btn) return;
         btn.addEventListener('click', function () {
-            var current = root.dataset.theme === 'dark' ? 'dark' : 'light';
+            const current = root.dataset.theme === 'dark' ? 'dark' : 'light';
             apply(current === 'dark' ? 'light' : 'dark');
             safeSet(STORAGE_KEY, root.dataset.theme);
         });

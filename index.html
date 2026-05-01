@@ -1,125 +1,130 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASNXXXXX · Company LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/important.css">
-    <title>ASNXXXXX - Company LLC</title>
 </head>
 
 <body>
 
-    <main class="container">
+    <div class="shell">
 
-        <nav>
-            <ul>
-                <li><strong>"#.com" Network</strong></li>
-            </ul>
-            <ul>
-                <li><a href="#" role="button">Visit - #</a></li>
-            </ul>
+        <nav class="pill-nav" aria-label="Primary">
+            <a class="brand" href="/">
+                <span class="brand-mark" aria-hidden="true">
+                    <span class="tri"></span>
+                    <span class="tri down"></span>
+                </span>
+                <span class="brand-name">#.com <em>Network</em></span>
+            </a>
+            <a class="visit-link" href="#">
+                Visit Site
+                <span class="arrow" aria-hidden="true">→</span>
+            </a>
         </nav>
 
-        <hgroup>
-            <h2>ASNXXXXX</h2>
-            <h3>Company LLC - 🇺🇸 Country</h3>
-        </hgroup>
+        <header class="hero">
+            <p class="eyebrow">Autonomous System</p>
+            <h1 class="display">ASN<em>XXXXX</em></h1>
+            <p class="lead">Company LLC <span class="sep">·</span> 🇺🇸 Country</p>
+        </header>
 
-        <hr>
-        <br>
-
-        <div class="grid">
-            <div>
-                <hgroup>
-                    <h5>Registered on</h5>
-                    <h6>1st of January 1970</h6>
-                </hgroup>
+        <section class="meta-grid" aria-label="Network details">
+            <div class="meta-cell">
+                <p class="label">Registered</p>
+                <p class="value">1 January 1970</p>
             </div>
 
-            <div>
-                <hgroup>
-                    <h5>Prefixes</h5>
-                    <h6>Yx IPv4, Yx IPv6</h6>
-                </hgroup>
+            <div class="meta-cell">
+                <p class="label">Prefixes</p>
+                <p class="value">Y× IPv4 <span class="sep">·</span> Y× IPv6</p>
             </div>
+
+            <div class="meta-cell">
+                <p class="label">Region</p>
+                <p class="value">Allocated under <em>RIPE</em></p>
+            </div>
+
+            <div class="meta-cell">
+                <p class="label">Upstreams</p>
+                <p class="value">
+                    <a href="https://bgp.tools/as/xxxxxx">ASxxxxxx</a>
+                    <span class="sub">Upstream 1</span>
+                </p>
+                <p class="value">
+                    <a href="https://bgp.tools/as/xxxxxx">ASxxxxxx</a>
+                    <span class="sub">Upstream 2</span>
+                </p>
+            </div>
+        </section>
+
+        <div class="section-head">
+            <h2>Announced <em>prefixes</em></h2>
         </div>
 
-        <div class="grid">
-            <div>
-                <hgroup>
-                    <h5>Upstreams</h5>
-                    <h6 style="font-weight: normal !important;"><a href="https://bgp.tools/as/xxxxxx">ASxxxxxx</a> -
-                        Upstream 1</h6>
-                        <h6 style="font-weight: normal !important;"><a href="https://bgp.tools/as/xxxxxx">ASxxxxxx</a> -
-                            Upstream 2</h6>
-                    <h6><a href=""></a></h6>
-                </hgroup>
-            </div>
+        <section class="prefix-grid">
+            <article class="prefix-card">
+                <header class="card-head">
+                    <h3 class="title">IPv4</h3>
+                    <span class="count">3 prefixes</span>
+                </header>
+                <ul class="prefix-list">
+                    <li class="parent">
+                        <code>1.1.1.0/23</code>
+                    </li>
+                    <li class="child">
+                        <code>1.1.1.0/24</code>
+                        <span class="loc">City, Country</span>
+                    </li>
+                    <li class="child">
+                        <code>1.1.2.0/24</code>
+                        <span class="loc">City, Country</span>
+                    </li>
+                    <li class="parent">
+                        <code>37.19.194.0/23</code>
+                        <span class="loc">City, Country</span>
+                    </li>
+                </ul>
+            </article>
 
-            <div>
-                <hgroup>
-                    <h5>Region</h5>
-                    <h6>Allocated under "RIPE/ARIN/LACNIC/AFRINIC/APNIC"</h6>
-                </hgroup>
-            </div>
-        </div>
+            <article class="prefix-card">
+                <header class="card-head">
+                    <h3 class="title">IPv6</h3>
+                    <span class="count">2 prefixes</span>
+                </header>
+                <ul class="prefix-list">
+                    <li class="parent">
+                        <code>ffff:ffff:ffff::/40</code>
+                        <span class="loc">City, Country</span>
+                    </li>
+                    <li class="parent">
+                        <code>ffff:ffff:ffff::/40</code>
+                        <span class="loc">City, Country</span>
+                    </li>
+                </ul>
+            </article>
+        </section>
 
-        <div class="grid">
-            <div>
-                <article style="margin: 10px; padding: 30px;">
-                    <h5>IPv4</h5>
-                    <kbd>1.1.1.0/23</kbd>
-                    <br>
-                    <kbd style="margin-left: 30px; margin-bottom: 5px; margin-top: 10px;">1.1.1.0/24</kbd><span
-                        class="p"> - City, Country</span>
-                    <br>
-                    <kbd style="margin-left: 30px; margin-bottom: 10px;">1.1.2.0/24</kbd><span class="p"> - City, Country</span>
-                    <br>
-                    <kbd>37.19.194.0/23</kbd><span class="p"> - City, Country</span>
-                </article>
+        <section class="actions" aria-label="Actions">
+            <a class="btn primary" href="#">Action 1 <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn secondary" href="#">Action 2</a>
+            <a class="btn ghost" href="#">Action 3</a>
+            <a class="btn ghost" href="#">Action 4</a>
+        </section>
 
-            </div>
+        <footer class="site-foot">
+            <p class="wordmark">Nox<em>it</em>y<span class="dot">.</span></p>
+            <small>Made with <em>care</em> by <a href="https://maticboncina.si">Matic Bončina</a> in Slovenia.</small>
+        </footer>
 
-            <div>
-                <article style="margin: 10px; padding: 30px;">
-                    <h5>IPv6</h5>
-                    <kbd>ffff:ffff:ffff::/40</kbd><span class="p"> - City, Country</span>
-                    <br>
-                    <kbd style="margin-top: 10px;">ffff:ffff:ffff::/40</kbd><span class="p"> - City, Country</span>
-                </article>
-            </div>
-        </div>
+    </div>
 
-        <hr>
-        <br>
-
-        <div class="grid">
-            <div>
-                <button class="secondary" href="">Button 1</button>
-            </div>
-
-            <div>
-                <button class="secondary" href="">Button 2</button>
-            </div>
-
-            <div>
-                <button class="secondary" href="">Button 3</button>
-            </div>
-
-            <div>
-                <button class="secondary" href="">Button 4</button>
-            </div>
-        </div>
-
-<hr>
-
-<footer style="text-align: center;">
-    <small>Licensed under <a href="https://github.com/picocss/pico/blob/master/LICENSE.md">MIT</a> - Made with ❤️ by <a href="https://maticboncina.si">Matic Bončina</a> in Slovenia 🇸🇮.</small>
-</footer>
-
-    </main>
 </body>
 
 </html>

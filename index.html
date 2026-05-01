@@ -5,6 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ASNXXXXX · Company LLC</title>
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('theme');
+                var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', saved || preferred);
+            } catch (e) { /* localStorage blocked — default to light */ }
+        })();
+    </script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -20,10 +29,21 @@
                 </span>
                 <span class="brand-name">#.com <em>Network</em></span>
             </a>
-            <a class="visit-link" href="#">
-                Visit Site
-                <span class="arrow" aria-hidden="true">→</span>
-            </a>
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle" aria-label="Toggle theme" data-theme-toggle>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                    </svg>
+                </button>
+                <a class="visit-link" href="#">
+                    Visit Site
+                    <span class="arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
         </nav>
 
         <header class="hero">
@@ -32,32 +52,36 @@
             <p class="lead">Company LLC <span class="sep">·</span> 🇺🇸 Country</p>
         </header>
 
-        <section class="meta-grid" aria-label="Network details">
-            <div class="meta-cell">
-                <p class="label">Registered</p>
-                <p class="value">1 January 1970</p>
+        <section class="info-grid" aria-label="Network details">
+            <div class="info-facts">
+                <div class="info-row">
+                    <p class="label">Registered</p>
+                    <p class="value">1 January 1970</p>
+                </div>
+                <div class="info-row">
+                    <p class="label">Prefixes</p>
+                    <p class="value">Y× IPv4 <span class="sep">·</span> Y× IPv6</p>
+                </div>
+                <div class="info-row">
+                    <p class="label">Region</p>
+                    <p class="value">Allocated under <em>RIPE</em></p>
+                </div>
             </div>
 
-            <div class="meta-cell">
-                <p class="label">Prefixes</p>
-                <p class="value">Y× IPv4 <span class="sep">·</span> Y× IPv6</p>
-            </div>
-
-            <div class="meta-cell">
-                <p class="label">Region</p>
-                <p class="value">Allocated under <em>RIPE</em></p>
-            </div>
-
-            <div class="meta-cell">
-                <p class="label">Upstreams</p>
-                <p class="value">
-                    <a href="https://bgp.tools/as/xxxxxx">ASxxxxxx</a>
-                    <span class="sub">Upstream 1</span>
-                </p>
-                <p class="value">
-                    <a href="https://bgp.tools/as/xxxxxx">ASxxxxxx</a>
-                    <span class="sub">Upstream 2</span>
-                </p>
+            <div class="info-upstreams">
+                <header class="us-head">
+                    <p class="label">Upstreams <span class="count">2</span></p>
+                </header>
+                <div class="us-grid">
+                    <a class="us-chip" href="https://bgp.tools/as/xxxxxx">
+                        <span class="asn">ASxxxxxx</span>
+                        <span class="name">Upstream 1</span>
+                    </a>
+                    <a class="us-chip" href="https://bgp.tools/as/xxxxxx">
+                        <span class="asn">ASxxxxxx</span>
+                        <span class="name">Upstream 2</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -121,6 +145,19 @@
         </footer>
 
     </div>
+
+    <script>
+        (function () {
+            var btn = document.querySelector('[data-theme-toggle]');
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                var next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) { /* localStorage blocked */ }
+            });
+        })();
+    </script>
 
 </body>
 

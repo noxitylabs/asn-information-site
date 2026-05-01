@@ -5,15 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ASNXXXXX · Company LLC</title>
-    <script>
-        (function () {
-            try {
-                var saved = localStorage.getItem('theme');
-                var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', saved || preferred);
-            } catch (e) { /* localStorage blocked — default to light */ }
-        })();
-    </script>
+    <script src="./js/theme.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -145,19 +137,6 @@
         </footer>
 
     </div>
-
-    <script>
-        (function () {
-            var btn = document.querySelector('[data-theme-toggle]');
-            if (!btn) return;
-            btn.addEventListener('click', function () {
-                var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-                var next = current === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', next);
-                try { localStorage.setItem('theme', next); } catch (e) { /* localStorage blocked */ }
-            });
-        })();
-    </script>
 
 </body>
 
